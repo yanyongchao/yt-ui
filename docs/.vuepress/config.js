@@ -4,9 +4,9 @@ function resolve (dir) {
 }
 
 module.exports = {
-    title: 'Ange UI',
-    base: '/ange-ui/',
-    description: 'Ange UI Document',
+    title: 'YT UI',
+    base: '/yt-ui/',
+    description: 'YT UI Document',
     head: [
       ['link', { rel: 'shortcut icon', href: '/favicon.ico' }]
     ]
