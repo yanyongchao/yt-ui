@@ -1,0 +1,34 @@
+@include getCls(button) {
+  position: relative;
+  padding: 0 14px;
+  border-width: 1px;
+  border-style: solid;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-appearance: none;
+  outline: none;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    opacity: 0;
+  }
+  &-primary {
+    border-color: $primary-color;
+    background-color: $primary-color;
+    color: $white;
+  }
+  &-large {
+    width: 100%;
+    height: 47px;
+    border-radius: 5px;
+    line-height: 45px;
+    font-size: $size-18;
+  }
+}

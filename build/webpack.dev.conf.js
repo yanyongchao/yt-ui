@@ -13,9 +13,7 @@ const devConf = {
     resolve: {
       extensions: ['.js', '.vue', '.json'],
       alias: {
-        '@': resolve('../packages'),
-        assets: resolve('../examples/assets'),
-        views: resolve('../examples/views')
+        '@': resolve('../src')
       }
     }
   },

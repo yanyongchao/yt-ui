@@ -3,18 +3,18 @@ const glob = require('glob')
 
 const resolve = (dir) => path.resolve(__dirname, dir)
 
-let entryFiles = glob.sync(resolve('../packages/**/*.js'))
+let entryFiles = glob.sync(resolve('../src/components/**/*.js'))
 
 entryFiles = entryFiles.reduce((prev, next) => {
-  let moduleName = next.match(/packages\/(\w+)\/index\.js/)
+  let moduleName = next.match(/src\/components\/(\w+)\/index\.js/)
   if (moduleName) {
     moduleName = moduleName[1]
-  } else {
-    moduleName = 'index'
   }
   prev[moduleName] = resolve(next)
   return prev
 }, {})
+
+entryFiles.index = resolve('../src/index.js')
 
 const buildConf = {
   outputDir: 'lib',
@@ -32,6 +32,12 @@ const buildConf = {
     output: {
       filename: '[name]/index.js',
       libraryTarget: 'commonjs2'
+    },
+    resolve: {
+      extensions: ['.js', '.vue', '.json'],
+      alias: {
+        '@': resolve('../src')
+      }
     }
   },
   chainWebpack: config => {

@@ -1,0 +1,42 @@
+$namespace: 'yt';
+
+$black: #000;
+$white: #fff;
+$red: #f44;
+$blue: #38f;
+$orange: #ff976a;
+$green: #06bf04;
+$gray: #ebedf0;
+
+$primary-color: #e83e43 !default;
+$disabled-color: #f67377 !default;
+
+$primary-text-color: #000 !default;
+$secondary-text-color: #888 !default;
+$auxiliary-text-color: #999 !default;
+$dark-hint-text-color: #bbb !default;
+
+$background-color: #f5f5f9 !default;
+$disabled-background-color: #ddd !default;
+$mask-background-color: rgba(0,0,0,.4) !default;
+
+$placeholder-text-color: $dark-hint-text-color;
+$border-color: $disabled-background-color;
+$line-color: #e5e5e5 !default;
+
+$radius-size: 4px;
+
+// 最小说明文字
+$size-12: 12px;
+// 辅助文字
+$size-14: 14px;
+// 双行列表内描述
+$size-15: 15px;
+// 单行列表右侧操作说明
+$size-16: 16px;
+// 单行列表左侧主题字
+$size-17: 17px;
+// 页面顶部标题
+$size-18: 18px;
+// 辅助文字
+$size-30: 30px;

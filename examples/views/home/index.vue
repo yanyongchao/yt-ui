@@ -1,12 +1,10 @@
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+  <div class="home">home</div>
 </template>
 
 <script>
 export default {
-  name: 'App',
+  name: '',
 
   mixins: [],
 
@@ -33,7 +31,5 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-#app {
-  height: 100%;
-}
+
 </style>
