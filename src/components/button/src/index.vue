@@ -2,9 +2,15 @@
   <button :class="[getCls('', size, type), {
       'disabled': disabled || loading
     }]"
-    :disabled="disabled">
-    <span class="iconfont icon-left"></span>
-    页面主按钮
+    :disabled="disabled" @click="handleClick">
+    <span :class="getCls('loading-circle')" v-if="loading || fetching">
+      <svg viewBox="25 25 50 50">
+        <circle cx="50" cy="50" r="20" fill="none"></circle>
+      </svg>
+    </span>
+    <span v-if="$slots.default" :class="getCls('text')">
+      <slot></slot>
+    </span>
   </button>
 </template>
 <script>
@@ -16,7 +22,7 @@ export default {
   props: {
     size: {
       type: String,
-      default: 'large'
+      default: 'normal'
     },
     type: {
       type: String,
@@ -28,6 +34,23 @@ export default {
   },
   data () {
     return {
+      fetching: false // 请求中
+    }
+  },
+  methods: {
+    handleClick (e) {
+      if (this.fetch) {
+        this.fetching = true
+        this.fetch()
+          .then(() => {
+            this.fetching = false
+          })
+          .catch(() => {
+            this.fetching = false
+          })
+      } else {
+        this.$emit('click', e)
+      }
     }
   }
 }

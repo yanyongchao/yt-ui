@@ -1,5 +1,10 @@
 <template>
-  <div class="navbar">navbar</div>
+  <div class="navbar">
+    <yt-navbar leftText="返回"
+      title="主页"
+      rightText="文本">
+    </yt-navbar>
+  </div>
 </template>
 
 <script>
@@ -12,7 +17,9 @@ export default {
 
   props: {},
 
-  data () {},
+  data () {
+    return {}
+  },
 
   computed: {},
 

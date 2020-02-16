@@ -1,9 +1,9 @@
 import Button from '@/components/button'
-import testB from '@/components/testB'
+import Navbar from '@/components/navbar'
 
 export default {
   install (Vue) {
     Vue.use(Button)
-    Vue.use(testB)
+    Vue.use(Navbar)
   }
 }

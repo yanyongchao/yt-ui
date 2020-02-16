@@ -1,0 +1,96 @@
+/* dropdown 动画 */
+.drop-fade-enter-active,
+.drop-fade-leave-active {
+  transition: all $transition-time linear;
+}
+.drop-fade-enter,
+.drop-fade-leave-to {
+  opacity: 0;
+  transform: scaleY(.6);
+}
+
+/* 透明度动画 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: $fade-transition;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* 缩放动画 */
+.bounce-enter-active,
+.bounce-leave-active {
+  transition: $all-transition;
+}
+.bounce-enter,
+.bounce-leave-to {
+  opacity: 0;
+  transform: translate3d(-50%,-50%,0) scale(.4);
+}
+
+/* 从上划入动画 */
+.top-enter-active,
+.top-leave-active {
+  transition: $all-transition;
+}
+.top-enter,
+.top-leave-to {
+  transform: translate3d(0,-100%,0);
+}
+
+/* 从右边划入动画 */
+.right-enter-active,
+.right-leave-active {
+  transition: $all-transition;
+}
+.right-enter,
+.right-leave-to {
+  transform: translate3d(100%,0,0);
+}
+
+/* 从下边划入动画 */
+.bottom-enter-active,
+.bottom-leave-active {
+  transition: $all-transition;
+}
+.bottom-enter,
+.bottom-leave-to {
+  transform: translate3d(0,100%,0);
+}
+
+/* 从左边划入动画 */
+.left-enter-active,
+.left-leave-active {
+  transition: $all-transition;
+}
+.left-enter,
+.left-leave-to {
+  transform: translate3d(-100%,0,0);
+}
+
+/* 旋转动画 */
+@keyframes fsRotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fsCircular {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -40;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -120;
+  }
+}
