@@ -55,7 +55,7 @@ export default {
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    // background-color: #f7f8fa;
-    background-color: #fff;
+    background-color: #f7f8fa;
+    // background-color: #fff;
   }
 </style>

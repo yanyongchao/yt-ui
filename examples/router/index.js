@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import baseModules from './modules/base'
+import navModules from './modules/nav'
 
 Vue.use(VueRouter)
 
@@ -19,24 +21,8 @@ const routes = [
           showNavbar: false
         }
       },
-      {
-        path: '/button',
-        name: 'button',
-        component: () => import(/* webpackChunkName: "button" */ '../views/button'),
-        meta: {
-          title: 'Button',
-          showNavbar: true
-        }
-      },
-      {
-        path: '/navbar',
-        name: 'navbar',
-        component: () => import(/* webpackChunkName: "navbar" */ '../views/navbar'),
-        meta: {
-          title: 'Navbar',
-          showNavbar: true
-        }
-      }
+      ...baseModules,
+      ...navModules
     ]
   }
 ]

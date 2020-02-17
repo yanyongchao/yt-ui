@@ -1,0 +1,14 @@
+@include getCls('group') {
+  padding: 10px;
+  &-title {
+    padding: 10px 0;
+    color: $primary-text-color;
+    font-size: $size-14;
+  }
+  &.no-padding-content {
+    padding: 10px 0;
+    .#{$namespace}-group-title {
+      padding: 10px;
+    }
+  }
+}

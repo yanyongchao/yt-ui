@@ -1,9 +1,15 @@
-import Button from '@/components/button'
-import Navbar from '@/components/navbar'
+import { importAll } from '@/untils/util'
+import { jsFileReg } from '@/untils/constant'
+
+const componentModules = importAll(
+  require.context('@/components', true, /index\.js$/),
+  jsFileReg
+)
 
 export default {
   install (Vue) {
-    Vue.use(Button)
-    Vue.use(Navbar)
+    componentModules.forEach(componentModule => {
+      Vue.use(componentModule.module)
+    })
   }
 }

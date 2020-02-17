@@ -5,22 +5,23 @@
       <span>YTUI</span>
     </div>
     <h2 class="demo-home__desc">轻量、可靠的移动端 Vue 组件库</h2>
-    <div class="demo-home-nav">
-      <div class="demo-home-nav__title">基础组件</div>
-      <div class="demo-home-nav__group">
-        <router-link :to="{ name: 'button' }" class="demo-home-nav__block">Button</router-link>
-      </div>
-    </div>
-    <div class="demo-home-nav">
-      <div class="demo-home-nav__title">导航组件</div>
-      <div class="demo-home-nav__group">
-        <router-link :to="{ name: 'navbar' }" class="demo-home-nav__block">Navbar</router-link>
+    <div class="demo-home-nav"
+      v-for="item in list"
+      :key="item.name">
+      <div class="demo-home-nav__title">{{item.name}}</div>
+      <div class="demo-home-nav__group"
+        v-for="route in item.modules"
+        :key="route.name">
+        <router-link :to="{ name: route.name }"
+          class="demo-home-nav__block">{{route.meta.title}}</router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import baseModules from '../../router/modules/base'
+import navModules from '../../router/modules/nav'
 export default {
   name: '',
 
@@ -31,7 +32,22 @@ export default {
   props: {},
 
   data () {
-    return {}
+    return {
+      list: [
+        {
+          name: '基础组件',
+          modules: [
+            ...baseModules
+          ]
+        },
+        {
+          name: '导航组件',
+          modules: [
+            ...navModules
+          ]
+        }
+      ]
+    }
   },
 
   computed: {},
@@ -85,6 +101,12 @@ export default {
       margin-left: 16px;
       color: #999;
       font-size: 14px;
+    }
+    &__group {
+      margin-bottom: 12px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
     &__block {
       display: flex;
