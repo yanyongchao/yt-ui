@@ -1,0 +1,26 @@
+@include getCls('popup') {
+  &-content {
+    z-index: $base-zindex * 1500 + 1;
+    position: fixed;
+  }
+  &-top {
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  &-right {
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &-bottom {
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  &-left {
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+}

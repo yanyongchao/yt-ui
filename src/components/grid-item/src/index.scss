@@ -1,0 +1,6 @@
+@include getCls(grid-item) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}

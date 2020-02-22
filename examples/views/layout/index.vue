@@ -1,14 +1,70 @@
 <template>
-  <div class="layout">
-    <yt-navbar :title="$route.meta.title"
-      v-show="$route.meta.showNavbar"
-      :fixed="true"
-      left-text="返回"
-      @click-left="handleClickRight"/>
-    <div class="layout-content"
-      :style="{ 'top': $route.meta.showNavbar ? '44px' : 0 }">
-      <router-view />
-    </div>
+  <div class="demo-layout">
+    <yt-group title="左对齐">
+      <yt-row justify="flex-start">
+        <yt-col span="6">
+          <div class="demo-layout-50 demo-layout-pink">span: 6</div>
+        </yt-col>
+        <yt-col span="6">
+          <div class="demo-layout-50 demo-layout-blue">span: 6</div>
+        </yt-col>
+        <yt-col span="6">
+          <div class="demo-layout-50 demo-layout-red">span: 6</div>
+        </yt-col>
+      </yt-row>
+    </yt-group>
+    <yt-group title="中对齐">
+      <yt-row justify="center">
+        <yt-col span="6">
+          <div class="demo-layout-50 demo-layout-pink">span: 6</div>
+        </yt-col>
+        <yt-col span="6">
+          <div class="demo-layout-50 demo-layout-blue">span: 6</div>
+        </yt-col>
+        <yt-col span="6">
+          <div class="demo-layout-50 demo-layout-red">span: 6</div>
+        </yt-col>
+      </yt-row>
+    </yt-group>
+    <yt-group title="右对齐">
+      <yt-row justify="flex-end">
+        <yt-col span="6">
+          <div class="demo-layout-50 demo-layout-pink">span: 6</div>
+        </yt-col>
+        <yt-col span="6">
+          <div class="demo-layout-50 demo-layout-blue">span: 6</div>
+        </yt-col>
+        <yt-col span="6">
+          <div class="demo-layout-50 demo-layout-red">span: 6</div>
+        </yt-col>
+      </yt-row>
+    </yt-group>
+    <yt-group title="居中对齐">
+      <yt-row justify="center" align="center">
+        <yt-col span="6">
+          <div class="demo-layout-40 demo-layout-pink">span: 6</div>
+        </yt-col>
+        <yt-col span="6">
+          <div class="demo-layout-50 demo-layout-blue">span: 6</div>
+        </yt-col>
+        <yt-col span="6">
+          <div class="demo-layout-30 demo-layout-red">span: 6</div>
+        </yt-col>
+      </yt-row>
+    </yt-group>
+    <yt-group title="offset">
+      <yt-row>
+        <yt-col span="6">
+          <div class="demo-layout-40 demo-layout-pink">span: 6</div>
+        </yt-col>
+        <yt-col span="6" offset="2">
+          <div class="demo-layout-50 demo-layout-blue">span: 6</div>
+        </yt-col>
+        <yt-col span="6">
+          <div class="demo-layout-30 demo-layout-red">span: 6</div>
+        </yt-col>
+      </yt-row>
+    </yt-group>
   </div>
 </template>
 
@@ -22,9 +78,7 @@ export default {
 
   props: {},
 
-  data () {
-    return {}
-  },
+  data () { return {} },
 
   computed: {},
 
@@ -36,26 +90,29 @@ export default {
 
   destroyed () {},
 
-  methods: {
-    handleClickRight () {
-      console.log('xxx')
-      this.$router.back()
-    }
-  }
+  methods: {}
 }
 </script>
 
 <style lang='scss' scoped>
-  .layout-content {
-    position: absolute;
-    top: 44px;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    background-color: #f7f8fa;
-    // background-color: #fff;
+.demo-layout {
+  &-30 {
+    height: 30px;
   }
+  &-40 {
+    height: 40px;
+  }
+  &-50 {
+    height: 50px;
+  }
+  &-red {
+    background-color: red;
+  }
+  &-blue {
+    background-color: blue;
+  }
+  &-pink {
+    background-color: pink;
+  }
+}
 </style>

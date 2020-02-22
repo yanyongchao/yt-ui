@@ -42,13 +42,4 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-.demo-group {
-  &__title {
-    padding: 32px 16px 16px 16px;
-    color: #666;
-    &:first-of-type {
-      padding-top: 20px;
-    }
-  }
-}
 </style>

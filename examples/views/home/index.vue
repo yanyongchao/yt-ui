@@ -22,6 +22,8 @@
 <script>
 import baseModules from '../../router/modules/base'
 import navModules from '../../router/modules/nav'
+import feedbackModules from '../../router/modules/feedback'
+
 export default {
   name: '',
 
@@ -41,6 +43,12 @@ export default {
           ]
         },
         {
+          name: '反馈组件',
+          modules: [
+            ...feedbackModules
+          ]
+        },
+        {
           name: '导航组件',
           modules: [
             ...navModules
@@ -56,7 +64,8 @@ export default {
 
   created () {},
 
-  mounted () {},
+  mounted () {
+  },
 
   destroyed () {},
 

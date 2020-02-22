@@ -23,6 +23,11 @@ const buildConf = {
     sourceMap: true,
     extract: {
       filename: 'style/[name].css'
+    },
+    loaderOptions: {
+      sass: {
+        prependData: '@import "@/styles/index.scss";'
+      }
     }
   },
   configureWebpack: {

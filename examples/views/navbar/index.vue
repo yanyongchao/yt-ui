@@ -1,19 +1,17 @@
 <template>
   <div class="demo-navbar">
-    <div class="demo-navbar-block">
-      <div class="demo-navbar__title">普通用法</div>
+    <yt-group title="普通用法">
       <yt-navbar leftText="返回"
         title="主页"
         rightText="文本">
       </yt-navbar>
-    </div>
-    <div class="demo-navbar-block">
-      <div class="demo-navbar__title">高级用法</div>
+    </yt-group>
+    <yt-group title="高级用法">
       <yt-navbar leftText="返回"
         title="主页">
         <span slot="right">slot文本</span>
       </yt-navbar>
-    </div>
+    </yt-group>
   </div>
 </template>
 

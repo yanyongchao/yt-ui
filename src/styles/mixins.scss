@@ -6,3 +6,36 @@
     @content;
   }
 }
+
+@mixin yt-1px-bottom($border-color: #e5e5e5, $left: 0, $height: 1px) {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: $left;
+    height: $height;
+    background: $border-color;
+    transform: scaleY(.5);
+  }
+}
+
+/* 点击白色块的视觉效果 */
+@mixin click-feed-back($bg-color: $white) {
+  cursor: pointer;
+  &:active {
+    background-color: darken($bg-color,5);
+  }
+}
+
+/* 点击链接的视觉效果 */
+@mixin link-feed-back($color: $primary-color) {
+  &:active {
+    color: darken($color,20);
+  }
+  &:visited {
+    color: $color;
+  }
+}

@@ -2,15 +2,16 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import baseModules from './modules/base'
 import navModules from './modules/nav'
+import feedbackModules from './modules/feedback'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'layout',
+    name: 'root',
     redirect: '/home',
-    component: () => import(/* webpackChunkName: "layout" */ '../views/layout'),
+    component: () => import(/* webpackChunkName: "layout" */ '../views/root'),
     children: [
       {
         path: '/home',
@@ -22,7 +23,8 @@ const routes = [
         }
       },
       ...baseModules,
-      ...navModules
+      ...navModules,
+      ...feedbackModules
     ]
   }
 ]

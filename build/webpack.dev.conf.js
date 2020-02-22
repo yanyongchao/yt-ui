@@ -9,6 +9,13 @@ const devConf = {
       filename: 'index.html'
     }
   },
+  css: {
+    loaderOptions: {
+      sass: {
+        prependData: '@import "@/styles/index.scss";'
+      }
+    }
+  },
   configureWebpack: {
     resolve: {
       extensions: ['.js', '.vue', '.json'],

@@ -9,13 +9,6 @@ const baseConf = {
   productionSourceMap: false, // 生产环境下 不使用soruceMap
   // eslint-disable-next-line no-dupe-keys
   parallel: require('os').cpus().length > 1,
-  css: {
-    loaderOptions: {
-      sass: {
-        prependData: '@import "@/styles/index.scss";'
-      }
-    }
-  },
   configureWebpack: config => {
     const plugins = []
     plugins.push(

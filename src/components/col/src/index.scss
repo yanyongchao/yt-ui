@@ -1,0 +1,11 @@
+@include getCls('col') {
+  position: relative;
+  box-sizing: border-box;
+  @for $i from 1 through 24 {
+    &-#{$i} { width: $i * 100% / 24; }
+  }
+
+  @for $i from 1 to 24 {
+    &-offset-#{$i} { margin-left: $i * 100% / 24; }
+  }
+}

@@ -26,6 +26,24 @@ const baseModules = [
       title: 'Cell',
       showNavbar: true
     }
+  },
+  {
+    path: '/layout',
+    name: 'layout',
+    component: () => import(/* webpackChunkName: "layout" */ '../../views/layout'),
+    meta: {
+      title: 'Layout',
+      showNavbar: true
+    }
+  },
+  {
+    path: '/grid',
+    name: 'grid',
+    component: () => import(/* webpackChunkName: "grid" */ '../../views/grid'),
+    meta: {
+      title: 'Grid',
+      showNavbar: true
+    }
   }
 ]
 

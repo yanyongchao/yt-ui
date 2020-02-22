@@ -1,0 +1,40 @@
+@include getCls('cell') {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 15px;
+  background-color: $white;
+  &::after {
+    content: ' ';
+    position: absolute;
+    left: 15px;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: $line-color;
+    transform: translateY(.5);
+  }
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+  &-title {
+    flex: 1;
+    color: $primary-text-color;
+    font-size: $size-16;
+  }
+  &-title-desc {
+    margin-top: 4px;
+    color: $secondary-text-color;
+    font-size: $size-14;
+  }
+  &-value {
+    color: $secondary-text-color;
+    font-size: $size-14;
+  }
+  &-right-icon {
+    color: $border-color;
+  }
+}
