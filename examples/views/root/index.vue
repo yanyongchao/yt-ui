@@ -48,7 +48,6 @@ export default {
 <style lang='scss' scoped>
   .layout-content {
     padding-top: 44px;
-    background-color: #f7f8fa;
     // background-color: #fff;
   }
 </style>

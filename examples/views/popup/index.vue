@@ -72,5 +72,7 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-
+/deep/ .yt-popup-content {
+  background-color: #fff;
+}
 </style>

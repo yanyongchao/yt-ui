@@ -1,0 +1,26 @@
+@include getCls('notice') {
+  z-index: $base-zindex * 1500 + 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 16px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  white-space: pre-wrap;
+  text-align: center;
+  word-wrap: break-word;
+  &-primary {
+    background-color: $primary-color;
+  }
+  &-success {
+    background-color: $green;
+  }
+  &-warning {
+    background-color: $orange;
+  }
+  &-danger {
+    background-color: $primary-color;
+  }
+}

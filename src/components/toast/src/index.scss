@@ -1,0 +1,39 @@
+@include getCls('toast') {
+  z-index: $base-zindex * 1500 + 1;
+  @include self-center;
+  background-color: rgba(0,0,0,.6);
+  border-radius: 4px;
+  max-width: 70%;
+  width: fit-content;
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 20px;
+    color: $white;
+    white-space: pre-wrap;
+    text-align: center;
+    word-wrap: break-word;
+    .iconfont {
+      margin-bottom: 18px;
+      font-size: 36px;
+    }
+  }
+  &-text {
+    padding: 8px 12px;
+  }
+  &-success {
+    width: 112px;
+    min-height: 100px;
+    padding: 16px;
+    font-size: 14px;
+  }
+  &-fail {
+    width: 112px;
+    min-height: 110px;
+    padding: 16px;
+    font-size: 14px;
+  }
+}

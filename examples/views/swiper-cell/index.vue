@@ -1,12 +1,14 @@
 <template>
-  <div id="app">
-    <router-view />
+  <div class="demo-swiper-cell">
+    <yt-group title="基础用法">
+      <yt-swiper-cell></yt-swiper-cell>
+    </yt-group>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App',
+  name: '',
 
   mixins: [],
 
@@ -14,9 +16,7 @@ export default {
 
   props: {},
 
-  data () {
-    return {}
-  },
+  data () { return {} },
 
   computed: {},
 
@@ -33,8 +33,5 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-#app {
-  min-height: 100vh;
-  background-color: #f7f8fa;
-}
+
 </style>

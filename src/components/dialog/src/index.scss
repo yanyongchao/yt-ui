@@ -1,0 +1,35 @@
+@include getCls('dialog') {
+  z-index: $base-zindex * 1500 + 1;
+  @include self-center;
+  overflow: hidden;
+  width: 320px;
+  border-radius: 16px;
+  background-color: $white;
+  &-header {
+    padding-top: 24px;
+    line-height: 24px;
+    color: $primary-text-color;
+    text-align: center;
+    font-weight: 500;
+  }
+  &-content {
+    max-height: 60vh;
+    padding: 12px 24px 24px 24px;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 20px;
+    color: $secondary-text-color;
+    white-space: pre-wrap;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  &-footer {
+    display: flex;
+    align-items: center;
+    .yt-button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+}

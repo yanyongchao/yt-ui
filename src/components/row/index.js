@@ -1,6 +1,6 @@
-import Button from './src/index.vue'
+import Row from './src/index.vue'
 
-Button.install = function (Vue) {
-  Vue.component(Button.name, Button)
+Row.install = function (Vue) {
+  Vue.component(Row.name, Row)
 }
-export default Button
+export default Row

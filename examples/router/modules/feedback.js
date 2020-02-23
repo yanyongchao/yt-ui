@@ -26,6 +26,42 @@ const feedbackModules = [
       title: 'ActionSheet',
       showNavbar: true
     }
+  },
+  {
+    path: '/dialog',
+    name: 'dialog',
+    component: () => import(/* webpackChunkName: "dialog" */ '../../views/dialog'),
+    meta: {
+      title: 'Dialog',
+      showNavbar: true
+    }
+  },
+  {
+    path: '/toast',
+    name: 'toast',
+    component: () => import(/* webpackChunkName: "toast" */ '../../views/toast'),
+    meta: {
+      title: 'Toast',
+      showNavbar: true
+    }
+  },
+  {
+    path: '/notice',
+    name: 'notice',
+    component: () => import(/* webpackChunkName: "notice" */ '../../views/notice'),
+    meta: {
+      title: 'Notice',
+      showNavbar: true
+    }
+  },
+  {
+    path: '/swiper-cell',
+    name: 'swiperCell',
+    component: () => import(/* webpackChunkName: "notice" */ '../../views/swiper-cell'),
+    meta: {
+      title: 'SwiperCell',
+      showNavbar: true
+    }
   }
 ]
 
