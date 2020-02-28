@@ -1,6 +1,15 @@
 // 导航组价
 const feedbackModules = [
   {
+    path: '/overlay',
+    name: 'overlay',
+    component: () => import(/* webpackChunkName: "overlay" */ '../../views/overlay'),
+    meta: {
+      title: 'Overlay',
+      showNavbar: true
+    }
+  },
+  {
     path: '/loading',
     name: 'loading',
     component: () => import(/* webpackChunkName: "loading" */ '../../views/loading'),
@@ -60,6 +69,15 @@ const feedbackModules = [
     component: () => import(/* webpackChunkName: "notice" */ '../../views/swiper-cell'),
     meta: {
       title: 'SwiperCell',
+      showNavbar: true
+    }
+  },
+  {
+    path: '/dropdown-menu',
+    name: 'dropdownMenu',
+    component: () => import(/* webpackChunkName: "notice" */ '../../views/dropdown-menu'),
+    meta: {
+      title: 'dropdownMenu',
       showNavbar: true
     }
   }

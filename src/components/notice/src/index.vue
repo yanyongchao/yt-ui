@@ -1,6 +1,8 @@
 <template>
   <transition name="top">
-    <div :class="[getCls('', type)]" v-show="show">
+    <div :class="[getCls('', type)]"
+      v-show="show"
+      v-transfer-dom>
       {{message}}
     </div>
   </transition>
@@ -8,6 +10,7 @@
 
 <script>
 import prefix, { PREFIX } from '@/mixins/prefix'
+import transferDom from '@/directives/transfer-dom'
 
 export default {
   name: `${PREFIX}Notice`,
@@ -33,6 +36,10 @@ export default {
     return {
       show: false
     }
+  },
+
+  directives: {
+    'transfer-dom': transferDom
   },
 
   methods: {

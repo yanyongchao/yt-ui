@@ -8,8 +8,9 @@ $orange: #ff976a;
 $green: #06bf04;
 $gray: #ebedf0;
 
-$primary-color: #e83e43 !default;
-$disabled-color: #f67377 !default;
+$primary-color: #108ee9 !default;
+$danger-color: #e94f4f;
+$warning-color: #ff976a;
 
 $primary-text-color: #333 !default;
 $secondary-text-color: #666 !default;
@@ -25,6 +26,7 @@ $border-color: $disabled-background-color;
 $line-color: #e5e5e5 !default;
 
 $transition-time: .3s;
+$animation-time: .3s;
 $all-transition: all .3s cubic-bezier(.645,.045,.355,1) !default;
 $fade-transition: opacity .3s cubic-bezier(.23,1,.32,1) !default;
 $fade-linear-transition: opacity .2s linear !default;

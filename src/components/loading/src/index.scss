@@ -16,7 +16,7 @@
     width: 36px;
     height: 36px;
     box-sizing: border-box;
-    animation: fsRotate .8s linear infinite;
+    animation: rotate .8s linear infinite;
     animation-duration: 2s;
   }
   &-circular {
@@ -29,7 +29,7 @@
           stroke: currentColor;
           stroke-width: 3;
           stroke-linecap: round;
-          animation: fsCircular 1.5s ease-in-out infinite;
+          animation: circular 1.5s ease-in-out infinite;
         }
       }
     }

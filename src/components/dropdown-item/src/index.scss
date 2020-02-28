@@ -1,0 +1,39 @@
+@include getCls('dropdown-item') {
+  overflow: hidden;
+  z-index: $base-zindex * 1500 + 1;
+  position: fixed;
+  top: 145px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  &-content {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  &-clickable {
+    padding: 10px 16px;
+    line-height: 24px;
+    background-color: $white;
+    @include yt-1px-bottom;
+    &:hover {
+      color: $primary-color;
+    }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: .6;
+  }
+}

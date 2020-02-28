@@ -40,6 +40,10 @@ export default {
     show: {
       type: Boolean,
       default: false
+    },
+    overlay: {
+      type: Boolean,
+      default: false
     }
   },
 

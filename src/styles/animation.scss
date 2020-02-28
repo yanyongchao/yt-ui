@@ -1,86 +1,88 @@
-/* dropdown 动画 */
-.drop-fade-enter-active,
-.drop-fade-leave-active {
-  transition: all $transition-time linear;
-}
-.drop-fade-enter,
-.drop-fade-leave-to {
-  opacity: 0;
-  transform: scaleY(.6);
-}
-
-/* 透明度动画 */
-.fade-enter-active,
-.fade-leave-active {
-  transition: $fade-transition;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-
-/* 缩放动画 */
-.bounce-enter-active,
-.bounce-leave-active {
-  transition: $all-transition;
-}
-.bounce-enter,
-.bounce-leave-to {
-  opacity: 0;
-  transform: translate3d(-50%,-50%,0) scale(.4);
-}
-
-/* 从上划入动画 */
-.top-enter-active,
-.top-leave-active {
-  transition: $all-transition;
-}
-.top-enter,
-.top-leave-to {
-  transform: translate3d(0,-100%,0);
-}
-
-/* 从右边划入动画 */
-.right-enter-active,
-.right-leave-active {
-  transition: $all-transition;
-}
-.right-enter,
-.right-leave-to {
-  transform: translate3d(100%,0,0);
-}
-
-/* 从下边划入动画 */
-.bottom-enter-active,
-.bottom-leave-active {
-  transition: $all-transition;
-}
-.bottom-enter,
-.bottom-leave-to {
-  transform: translate3d(0,100%,0);
-}
-
-/* 从左边划入动画 */
-.left-enter-active,
-.left-leave-active {
-  transition: $all-transition;
-}
-.left-enter,
-.left-leave-to {
-  transform: translate3d(-100%,0,0);
-}
-
-/* 旋转动画 */
-@keyframes fsRotate {
-  0% {
-    transform: rotate(0);
+@keyframes slide-up-enter {
+  from {
+    transform: translate3d(0, -100%, 0);
   }
-  100% {
+}
+
+@keyframes slide-up-leave {
+  to {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes slide-down-enter {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes slide-down-leave {
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes slide-left-enter {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes slide-left-leave {
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes slide-right-enter {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes slide-right-leave {
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes bounce-in {
+  from {
+    opacity: 0;
+    transform: translate3d(-50%,-50%,0) scale(.4);
+  }
+}
+
+@keyframes bounce-out {
+  to {
+    opacity: 0;
+    transform: translate3d(-50%,-50%,0) scale(.4);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
     transform: rotate(360deg);
   }
 }
 
-@keyframes fsCircular {
+@keyframes circular {
   0% {
     stroke-dasharray: 1, 200;
     stroke-dashoffset: 0;
@@ -92,5 +94,65 @@
   100% {
     stroke-dasharray: 90, 150;
     stroke-dashoffset: -120;
+  }
+}
+
+.fade {
+  &-enter-active {
+    animation: $animation-time fade-in;
+  }
+
+  &-leave-active {
+    animation: $animation-time fade-out;
+  }
+}
+
+.bounce {
+  &-enter-active {
+    animation: bounce-in $animation-time both cubic-bezier(.645,.045,.355,1);;
+  }
+
+  &-leave-active {
+    animation: bounce-out $animation-time both cubic-bezier(.645,.045,.355,1);;
+  }
+}
+
+.top {
+  &-enter-active {
+    animation: slide-up-enter $animation-time both cubic-bezier(.645,.045,.355,1);
+  }
+
+  &-leave-active {
+    animation: slide-up-leave $animation-time both cubic-bezier(.645,.045,.355,1);
+  }
+}
+
+.bottom {
+  &-enter-active {
+    animation: slide-down-enter $animation-time both cubic-bezier(.645,.045,.355,1);
+  }
+
+  &-leave-active {
+    animation: slide-down-leave $animation-time both cubic-bezier(.645,.045,.355,1);
+  }
+}
+
+.left {
+  &-enter-active {
+    animation: slide-left-enter $animation-time both cubic-bezier(.645,.045,.355,1);
+  }
+
+  &-leave-active {
+    animation: slide-left-leave $animation-time both cubic-bezier(.645,.045,.355,1);
+  }
+}
+
+.right {
+  &-enter-active {
+    animation: slide-right-enter $animation-time both cubic-bezier(.645,.045,.355,1);
+  }
+
+  &-leave-active {
+    animation: slide-right-leave $animation-time both cubic-bezier(.645,.045,.355,1);
   }
 }

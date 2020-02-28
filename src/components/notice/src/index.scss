@@ -15,12 +15,12 @@
     background-color: $primary-color;
   }
   &-success {
-    background-color: $green;
+    background-color: $primary-color;
   }
   &-warning {
-    background-color: $orange;
+    background-color: $warning-color;
   }
   &-danger {
-    background-color: $primary-color;
+    background-color: $danger-color;
   }
 }

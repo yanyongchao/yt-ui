@@ -2,15 +2,18 @@
   <div class="demo-button">
     <yt-group title="按钮尺寸">
       <div class="demo-button-row">
-        <yt-button>普通按钮</yt-button>
+        <yt-button size="small">小型按钮</yt-button>
       </div>
-      <yt-button size="large">块级按钮</yt-button>
+      <yt-button size="large">主要按钮</yt-button>
     </yt-group>
     <yt-group title="朴素按钮">
       <yt-button size="large" type="plain">朴素按钮</yt-button>
     </yt-group>
     <yt-group title="次要按钮">
       <yt-button size="large" type="secondary">次要按钮</yt-button>
+    </yt-group>
+    <yt-group title="危险按钮">
+      <yt-button size="large" type="danger">危险按钮</yt-button>
     </yt-group>
     <yt-group title="禁用按钮">
       <div class="demo-button-row">

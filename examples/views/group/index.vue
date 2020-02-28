@@ -1,14 +1,14 @@
 <template>
   <div class="demo-group">
     <yt-group title="基础用法">
-      <yt-button size="normal">按钮</yt-button>
+      <yt-button size="small">按钮</yt-button>
     </yt-group>
     <yt-group>
       <div slot="title">自定义标题</div>
-      <yt-button size="normal">按钮</yt-button>
+      <yt-button size="small">按钮</yt-button>
     </yt-group>
     <yt-group title="无padding内容" noPaddingContent>
-      <yt-button size="normal">按钮</yt-button>
+      <yt-button size="small">按钮</yt-button>
     </yt-group>
   </div>
 </template>

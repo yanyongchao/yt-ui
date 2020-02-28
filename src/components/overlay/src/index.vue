@@ -1,7 +1,10 @@
 <template>
-  <div :class="[getCls('')]"
-    @click="handleClick"
-    :style="styles"></div>
+  <transition name="fade">
+    <div v-show="value"
+      :class="[getCls('')]"
+      @click="handleClick"
+      :style="styles"></div>
+  </transition>
 </template>
 
 <script>
@@ -31,7 +34,6 @@ export default {
       const style = { 'z-index': this.zindex }
       if (this.value) {
         style.opacity = this.opacity
-        style['pointer-events'] = 'auto'
       }
       return style
     }

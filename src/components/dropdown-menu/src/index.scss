@@ -1,0 +1,31 @@
+@include getCls('dropdown-menu') {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  height: 50px;
+  &-item {
+    flex: 1;
+    width: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.active {
+      color: $primary-color;
+    }
+    &-title {
+      position: relative;
+      max-width: 100%;
+      padding: 0 10px;
+      .iconfont {
+        position: absolute;
+        top: 50%;
+        right: -7px;
+        color: inherit;
+        font-size: 10px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

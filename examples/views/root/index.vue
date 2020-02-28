@@ -38,7 +38,6 @@ export default {
 
   methods: {
     handleClickRight () {
-      console.log('xxx')
       this.$router.back()
     }
   }
@@ -46,6 +45,9 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+  .yt-navbar-fixed {
+    z-index: 1500;
+  }
   .layout-content {
     padding-top: 44px;
     // background-color: #fff;

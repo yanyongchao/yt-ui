@@ -3,6 +3,7 @@
   position: relative;
   &::after {
     content: "";
+    z-index: $base-zindex * 1500 + 10;
     position: absolute;
     top: 0;
     left: 0;

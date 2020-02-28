@@ -1,20 +1,16 @@
 <template>
   <div class="demo-popup">
     <yt-group title="顶部弹出">
-      <yt-button size="large"
-        @click="handleClick('show1')">顶部弹出</yt-button>
+      <yt-button @click="handleClick('show1')">顶部弹出</yt-button>
     </yt-group>
     <yt-group title="右侧弹出">
-      <yt-button size="large"
-        @click="handleClick('show2')">右侧弹出</yt-button>
+      <yt-button @click="handleClick('show2')">右侧弹出</yt-button>
     </yt-group>
     <yt-group title="底部弹出">
-      <yt-button size="large"
-        @click="handleClick('show3')">底部弹出</yt-button>
+      <yt-button @click="handleClick('show3')">底部弹出</yt-button>
     </yt-group>
     <yt-group title="左侧弹出">
-      <yt-button size="large"
-        @click="handleClick('show4')">左侧弹出</yt-button>
+      <yt-button @click="handleClick('show4')">左侧弹出</yt-button>
     </yt-group>
     <yt-popup v-model="show1" position="top">
       <div style="height: 200px;"></div>
@@ -65,7 +61,7 @@ export default {
       this[show] = true
       setTimeout(() => {
         this[show] = false
-      }, 2000)
+      }, 100000)
     }
   }
 }
