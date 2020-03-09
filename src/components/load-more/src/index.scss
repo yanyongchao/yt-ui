@@ -1,0 +1,60 @@
+@include getCls('load-more') {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #999;
+  &-loading {
+    margin-right: 8px;
+    animation: rotate .8s linear infinite;
+    animation-duration: 2s;
+  }
+  &-circular {
+    span {
+      svg {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        circle {
+          stroke: currentColor;
+          stroke-width: 3;
+          stroke-linecap: round;
+          animation: circular 1.5s ease-in-out infinite;
+        }
+      }
+    }
+  }
+  &-spinner {
+    span {
+      position: relative;
+      i {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        &::before {
+          content: ' ';
+          display: block;
+          width: 2px;
+          height: 20%;
+          margin: 0 auto;
+          border-radius: 40%;
+          background-color: currentColor;
+        }
+      }
+    }
+  }
+  &-text {
+    color: #999;
+    font-size: $size-14;
+  }
+}
+
+@for $i from 1 to 13 {
+  .yt-load-more-spinner span i:nth-of-type(#{$i}) {
+    $val: $i;
+    opacity: 1 - (.75 / 12) * ($val - 1);
+    transform: rotate(($val * 30deg));
+  }
+}

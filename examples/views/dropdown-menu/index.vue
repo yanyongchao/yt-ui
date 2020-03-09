@@ -4,6 +4,7 @@
       <yt-dropdown-item v-model="value1"
         :options="option1"></yt-dropdown-item>
       <yt-dropdown-item v-model="value2"
+        @change="handleChange"
         :options="option2"></yt-dropdown-item>
     </yt-dropdown-menu>
   </div>
@@ -50,7 +51,11 @@ export default {
 
   destroyed () {},
 
-  methods: {}
+  methods: {
+    handleChange (val) {
+      console.log(val)
+    }
+  }
 }
 </script>
 

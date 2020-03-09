@@ -1,14 +1,11 @@
 <template>
-  <div :class="[getCls('')]" v-transfer-dom>
-    <yt-overlay v-model="show"
-      :opacity="overlayOpacity"
-      @click="handleClickOverlay"></yt-overlay>
-    <transition :name="position">
-      <div v-show="show" :class="[getCls('content', position)]">
-        <slot></slot>
-      </div>
-    </transition>
-  </div>
+  <transition :name="position">
+    <div v-show="show"
+      :class="[getCls('', position)]"
+      v-transfer-dom>
+      <slot></slot>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -54,8 +51,22 @@ export default {
   },
 
   watch: {
-    value (newVal) {
-      this.show = newVal
+    value: {
+      handler (newVal) {
+        this.show = newVal
+        if (newVal) {
+          this.$overlay.show({
+            opacity: this.overlayOpacity,
+            onClick: () => {
+              this.$emit('click-overlay')
+              this.$emit('input', false)
+            }
+          })
+        } else {
+          this.$overlay.hide()
+        }
+      },
+      immediate: true
     }
   },
 

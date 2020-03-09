@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import baseModules from './modules/base'
 import navModules from './modules/nav'
 import feedbackModules from './modules/feedback'
+import displayModules from './modules/display'
 
 Vue.use(VueRouter)
 
@@ -24,7 +25,8 @@ const routes = [
       },
       ...baseModules,
       ...navModules,
-      ...feedbackModules
+      ...feedbackModules,
+      ...displayModules
     ]
   }
 ]

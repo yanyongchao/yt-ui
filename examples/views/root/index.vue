@@ -6,7 +6,7 @@
       left-text="返回"
       @click-left="handleClickRight"/>
     <div class="layout-content"
-      :style="{ 'padding-top': $route.meta.showNavbar ? '44px' : 0 }">
+      :class="{ 'show-navbar': $route.meta.showNavbar }">
       <router-view />
     </div>
   </div>
@@ -25,8 +25,6 @@ export default {
   data () {
     return {}
   },
-
-  computed: {},
 
   watch: {},
 
@@ -49,7 +47,9 @@ export default {
     z-index: 1500;
   }
   .layout-content {
-    padding-top: 44px;
-    // background-color: #fff;
+    padding-top: 0;
+    &.show-navbar {
+      padding-top: 44px;
+    }
   }
 </style>

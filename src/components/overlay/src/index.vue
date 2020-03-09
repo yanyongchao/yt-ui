@@ -1,8 +1,9 @@
 <template>
-  <transition name="fade">
+  <transition :name="animation ? 'fade' : ''">
     <div v-show="value"
       :class="[getCls('')]"
       @click="handleClick"
+      @touchmove.stop.prevent="noop"
       :style="styles"></div>
   </transition>
 </template>
@@ -27,6 +28,10 @@ export default {
     opacity: {
       type: Number,
       default: 0.6
+    },
+    animation: {
+      type: Boolean,
+      default: true
     }
   },
   computed: {
@@ -42,6 +47,9 @@ export default {
   methods: {
     handleClick (e) {
       this.$emit('click', e)
+    },
+    noop () {
+      // document.body.style.overflow = 'hidden'
     }
   }
 }

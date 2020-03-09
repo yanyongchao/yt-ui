@@ -23,6 +23,7 @@
 import baseModules from '../../router/modules/base'
 import navModules from '../../router/modules/nav'
 import feedbackModules from '../../router/modules/feedback'
+import displayModules from '../../router/modules/display'
 
 export default {
   name: '',
@@ -46,6 +47,12 @@ export default {
           name: '反馈组件',
           modules: [
             ...feedbackModules
+          ]
+        },
+        {
+          name: '展示组件',
+          modules: [
+            ...displayModules
           ]
         },
         {

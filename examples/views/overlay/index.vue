@@ -36,7 +36,6 @@ export default {
   methods: {
     handleClick () {
       this.show = true
-      console.log('xx')
       setTimeout(() => {
         this.show = false
       }, 2000)

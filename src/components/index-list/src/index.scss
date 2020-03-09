@@ -1,0 +1,38 @@
+@include getCls('index-list') {
+  height: 100%;
+  /deep/.yt-group {
+    padding: 0;
+  }
+  /deep/.yt-group-title {
+    padding: 10px 15px;
+  }
+  &-title {
+    padding: 10px 15px;
+    background-color: #fff;
+  }
+  &-fix-title {
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 15px;
+    color: #333;
+    font-size: 14px;
+    background-color: #f7f8fa;
+  }
+  &-list-nav {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding: 0 5px;
+    transform: translateY(-50%);
+    &-item {
+      line-height: 30px;
+      &.active {
+        color: $primary-color;
+      }
+    }
+  }
+}

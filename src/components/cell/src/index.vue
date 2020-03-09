@@ -32,9 +32,9 @@ export default {
   components: {},
 
   props: {
-    title: String,
+    title: [String, Number],
     describe: String,
-    value: String,
+    value: [String, Number],
     isLink: Boolean,
     to: String,
     url: String

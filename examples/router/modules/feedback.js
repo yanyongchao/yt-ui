@@ -66,7 +66,7 @@ const feedbackModules = [
   {
     path: '/swiper-cell',
     name: 'swiperCell',
-    component: () => import(/* webpackChunkName: "notice" */ '../../views/swiper-cell'),
+    component: () => import(/* webpackChunkName: "swiper-cell" */ '../../views/swiper-cell'),
     meta: {
       title: 'SwiperCell',
       showNavbar: true
@@ -75,9 +75,18 @@ const feedbackModules = [
   {
     path: '/dropdown-menu',
     name: 'dropdownMenu',
-    component: () => import(/* webpackChunkName: "notice" */ '../../views/dropdown-menu'),
+    component: () => import(/* webpackChunkName: "dropdown-menu" */ '../../views/dropdown-menu'),
     meta: {
-      title: 'dropdownMenu',
+      title: 'DropdownMenu',
+      showNavbar: true
+    }
+  },
+  {
+    path: '/pull-refresh',
+    name: 'pullRefresh',
+    component: () => import(/* webpackChunkName: "pull-refresh" */ '../../views/pull-refresh'),
+    meta: {
+      title: 'PullRefresh',
       showNavbar: true
     }
   }

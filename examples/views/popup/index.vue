@@ -60,15 +60,15 @@ export default {
     handleClick (show) {
       this[show] = true
       setTimeout(() => {
-        this[show] = false
-      }, 100000)
+        // this[show] = false
+      }, 2000)
     }
   }
 }
 </script>
 
 <style lang='scss' scoped>
-/deep/ .yt-popup-content {
+.yt-popup {
   background-color: #fff;
 }
 </style>

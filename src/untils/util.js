@@ -17,22 +17,11 @@ export const importAll = (modulesContext, fileNameReg) => {
   })
 }
 
-export const pageScroll = (function () {
-  const fn = function (e) {
-    e.preventDefault()
-    e.stopPropagation()
+export const pageScroll = {
+  lock () {
+    document.body.classList.add('yt-overflow-hidden')
+  },
+  unlock () {
+    document.body.classList.remove('yt-overflow-hidden')
   }
-  let islock = false
-
-  return {
-    lock (el) {
-      if (islock) return
-      islock = true;
-      (el || document).addEventListener('touchmove', fn)
-    },
-    unlock (el) {
-      islock = false;
-      (el || document).removeEventListener('touchmove', fn)
-    }
-  }
-})()
+}

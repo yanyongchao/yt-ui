@@ -61,6 +61,12 @@ export default {
     }
   },
 
+  watch: {
+    value () {
+      this.$parent.updateMenu()
+    }
+  },
+
   created () {
     this.$parent.updateMenu()
   },
@@ -82,6 +88,7 @@ export default {
     },
     handleSelect (item) {
       this.$emit('input', item.value)
+      this.$emit('change', item.value)
       this.show = false
     }
   }

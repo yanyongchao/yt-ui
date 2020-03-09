@@ -1,12 +1,13 @@
 <template>
-  <div class="demo-loading">
-    <yt-loading :type="type" text="加载中" :show="show"></yt-loading>
-    <yt-group title="circular-loading">
-      <yt-button size="large" @click="handleClick('circular')">2秒后隐藏</yt-button>
+  <div class="demo-load-more">
+    <yt-group title="circular loadmore">
+      <yt-button @click="handleClick('circular')">2s后隐藏</yt-button>
     </yt-group>
-    <yt-group title="spinner-loading">
-      <yt-button size="large" @click="handleClick('spinner')">2秒后隐藏</yt-button>
+    <yt-group title="spinner loadmore">
+      <yt-button @click="handleClick('spinner')">2s后隐藏</yt-button>
     </yt-group>
+    <yt-load-more :type="type"
+      :show="show"></yt-load-more>
   </div>
 </template>
 
@@ -50,4 +51,5 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+
 </style>
