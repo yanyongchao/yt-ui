@@ -9,7 +9,7 @@ let vueConf = {
   ...baseConf
 }
 
-if (IS_PROD) {
+if (IS_PROD && process.env.BUILD_ENV === 'lib') {
   vueConf = { ...vueConf, ...prodConf }
 } else {
   vueConf = { ...vueConf, ...devConf }

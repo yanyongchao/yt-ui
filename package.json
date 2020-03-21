@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build:lib": "vue-cli-service build",
+    "build:lib": "cross-env BUILD_ENV=lib vue-cli-service build",
+    "build:example": "cross-env BUILD_ENV=example vue-cli-service build",
     "dev:docs": "vuepress dev docs",
     "build:docs": "vuepress build docs",
     "deploy:docs": "bash deploy-docs.sh",
@@ -28,6 +29,7 @@
     "@vue/eslint-config-standard": "^5.1.0",
     "@vue/test-utils": "1.0.0-beta.31",
     "babel-eslint": "^10.0.3",
+    "cross-env": "^7.0.2",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-node": "^11.0.0",
