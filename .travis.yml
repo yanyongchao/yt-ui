@@ -22,10 +22,9 @@ before_install:
   # 将私钥添加到 ssh
   - ssh-add ~/.ssh/id_rsa
 install:
-  - cnpm install
+  - npm install
 script:
-  - cnpm run build:example
+  - npm run build:example
 after_success:
   # 登录服务器，执行部署脚本，其实最好把后面一串写成 shell 文件
   - ssh root@47.114.87.163 -o StrictHostKeyChecking=no 'cd /root/yt-ui && git pull && cnpm install && cnpm run build:example && docker-compose up -d'
-  - cnpm run build:example
