@@ -4,7 +4,11 @@
       <img src="../../assets/images/logo.jpg" alt="">
       <span>YTUI</span>
     </div>
-    <h2 class="demo-home__desc">轻量、可靠的移动端 Vue 组件库</h2>
+    <h2 class="demo-home__desc"
+      style="margin-bottom: 5px;">轻量、可靠的移动端 Vue 组件库</h2>
+    <a class="demo-home__desc"
+      href="https://github.com/yanyongchao/yt-ui"
+      style="display: block;margin-bottom: 40px;">https://github.com/yanyongchao/yt-ui</a>
     <div class="demo-home-nav"
       v-for="item in list"
       :key="item.name">
@@ -101,7 +105,7 @@ export default {
     }
   }
   &__desc {
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
     padding-left: 16px;
     color: #999;
     font-size: 14px;
