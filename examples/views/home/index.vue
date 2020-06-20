@@ -4,7 +4,7 @@
       <img src="../../assets/images/logo.jpg" alt="">
       <span>YTUI</span>
     </div>
-    <h2 class="demo-home__desc">轻量、可靠的移动端 Vue 组件库</h2>
+    <h2 class="demo-home__desc">轻量、可靠的移动端Vue组件库1</h2>
     <div class="demo-home-nav"
       v-for="item in list"
       :key="item.name">
